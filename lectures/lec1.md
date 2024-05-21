@@ -13,7 +13,7 @@
 
 Lorem ipsum
 
-```bash
+```java
 package org.example.day2;
 
 public class Main {
