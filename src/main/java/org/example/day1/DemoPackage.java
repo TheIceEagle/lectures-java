@@ -13,6 +13,7 @@ public class DemoPackage {
     }
 
     public static void main(String[] args) {
+        System.out.println(methodSquare(1000));
 
     }
 
