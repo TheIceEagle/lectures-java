@@ -1,5 +1,8 @@
 package org.example.day1;
-import java.util.ArrayList;
+
+/*
+This is the where example of how package import is working
+*/
 
 public class DemoPackage {
 
