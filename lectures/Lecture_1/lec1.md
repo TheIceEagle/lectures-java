@@ -693,6 +693,9 @@ default:
 
 In this example, all inputs from 1 to 5 print "Weekdays" while cases 6 and 7 print "Weekends". Since dayOfWeek is equal to 4, the code block associated with the case 4: statement is executed, which prints "Weekdays" to the console.
 ## Errors and exceptions
+An exception is an error condition that occurs during the execution of a Java program
+
+This material may be protected by copyright.
 
 There are two types of exceptions:
 1.Checked
