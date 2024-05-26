@@ -697,8 +697,13 @@ default:
 ```
 
 In this example, all inputs from 1 to 5 print "Weekdays" while cases 6 and 7 print "Weekends". Since dayOfWeek is equal to 4, the code block associated with the case 4: statement is executed, which prints "Weekdays" to the console.
+
+### Loops
+![Loop meme.png](..%2F..%2F..%2F..%2FLoop%20meme.png)
+
+
 ## Errors and exceptions
-![img_16.png](img_16.png)
+![8rnkmq.jpg](..%2F..%2F..%2F..%2F8rnkmq.jpg)
 
 An exception is an error condition that occurs during the execution of a Java program
 
