@@ -698,16 +698,264 @@ default:
 
 In this example, all inputs from 1 to 5 print "Weekdays" while cases 6 and 7 print "Weekends". Since dayOfWeek is equal to 4, the code block associated with the case 4: statement is executed, which prints "Weekdays" to the console.
 
-### Loops
+### Iterations
+
+Java has three different control structures that allow the computer to perform iterative tasks: the for loop, while loop, and do...while loop.
 
 ![Loop meme.png](Loop%20meme.png)
 
 #### For Loops
 
-![p0076-01.jpg](..%2F..%2F..%2F..%2F..%2FAppData%2FLocal%2FTemp%2Fp0076-01.jpg)
+* The general form of for loop is:
+
+![Screenshot 2024-05-26 224454.png](Screenshot%202024-05-26%20224454.png)
+
+```java
+//outputs 1 2 3 4
+for (i = 1; i < 5; i++)
+  System.out.print(i + " ");
+
+```
+
+* The loop variable should not have its value changed inside the loop body
+
+```java
+for (int i = 0; i < 100; i++) {
+  i *= 2; // bad practice, may lead to unexpected results
+  statements // code to execute inside a loop
+}
+``` 
+
+* The following loop is syntactically valid:
+
+```java
+for (int i = 1; i <= 0; i++) {
+  System.out.prinln(i);
+}
+```
+We are not obligated to always write initialization, termination condition and update statement. However, program above either causes an error or prints infinitely many numbers because loop will never stop iterating. We can solve this problem by using `break` keyword.
+
+```java
+int i = 0;
+
+for (;;) {
+  System.out.println(++i);
+  if (i > 5) break;
+}
+
+// code above is equivalent to
+
+for (int i = 1;; ++i) {
+  System.out.println(i);
+  if (i > 5) break;
+}
+```
+
+`break` keyword, as in `switch` statements, makes loop stop iterating.
+
+#### For-each loop
+
+This is used to iterate over an array or collection. The general form of the loop is
+
+```java
+for (SomeType element : collection) { // for each element of type SomeType in collection . . .
+  statements // code to execute inside a loop
+}
+```
+
+* Example of for-loop usage:
+```java
+int[] arr = {1, 10, 100, 2, 20, 200};
+for (int element : arr)
+System.out.print(element + " ");
+// prints 1 10 100 2 20 200
+```
+
+* The **for-eac**h loop cannot be used for replacing or removing elements as you traverse. You cannot modify an array or collection inside a loop body.
+* The loop hides the index variable that is used with arrays. in arrays, each element has its own index, but you cannot access it using **for-each** loop.
+
+### While loop
+
+* The general form of the while loop is
+
+````java
+while (condition) {
+statements //loop body
+}
+````
+The condition is checked at the beginning of the loop. If it is true, the loop body is executed. Otherwise, control passes to the first statement following the loop. After execution of the loop body, the test is performed again. If true, the loop is executed again, and so on.
+
+* Here are some examples:
+```java
+int i = 1, mult3 = 3;
+while (mult3 < 20) {
+System.out.print(mult3 + " ");
+i++;
+mult3 *= i;
+}
+// outputs 3 6 18
+```
+Program iterates a loop body 3 times since condition is true in each of them. After the third iteration, mult3 = 18 * 4 = 72.           72 < 20 is false, and loop stops iterating.
+
+* It is possible for the body of a while loop never to be executed. This will happen if the test evaluates to false the first time.
+
+```java
+int i = 3;
+while (i > 5) {
+        System.out.println(i);
+i--;
+        }
+```
+
+* The body of a while loop must contain a statement that leads to termination. A loop variable should be changed in a loop body to prevent infinite loop.
+```java
+int i = 5;
+
+// this loop will never terminate and causes infinite loop
+while (i == 5) {
+System.out.prinln(i);
+}
+
+// this loop will terminate
+while (i < 10) {
+System.out.println(i);
+i++;
+}
+```
+
+* Condition of the while loop should be chosen carefully so that it will become false at some moment.
+
+```java
+int a = 1;
+while (a != 20) {
+System.out.println(a);
+a *= 2;
+}
+```
+
+
+Since `a` will never exactly equal 20, the loop will grind merrily along eventually causing an integer overflow.
+
+* while loop can be used to get a valid data from the user:
+```java
+Scanner myScanner = new Scanner();
+System.out.println("Enter a positive number from 1 to 10:");
+int num = myScanner.nextInt(); // read user input
+while (num < 1 || num > 10) {  // while num is less than 1 or more than 10
+System.out.println("Number must be from 1 to 10.");
+System.out.println("Please reenter:");
+num = myScanner.nextInt();
+}
+```
+
+In this case, program asks the user to reenter data until satisfactory input is gained.
+
+#### _do-while_ loop
+
+It is similar to a **while** loop, but with a key difference: in a **do-while** loop, the loop body is executed at least once, regardless of the value of the loop condition.
+
+* The basic syntax of do-while loop:
+
+```java
+do {
+statements // loop body
+} while (condition);
+```
+In this structure, the loop body is executed first, and then the condition is checked. If the condition is true, the loop body is executed again. This process continues until the condition becomes false.
+
+* Example of the do-while loop usage:
+```java
+Scanner myScanner = new Scanner();
+int num;
+do {
+System.out.println("Enter a positive number from 1 to 10:");
+num = myScanner.nextInt();  // read user input
+} while (num < 1 || num > 10); // while num is less than 1 or more than 10
+```
+
+In this case, we need user to input data at least once and then check if data is valid. So, **do-while** is the best option.
+### Nested Loops
+
+You create a **nested loop** when a loop is a statement in the body of another loop.
+
+* The basic syntax of the nested loops:
+
+
+```java
+for (initialization; termination condition; update statement) { // outer loop
+statements // body of loop
+for (initialization; termination condition; update statement) { // inner loop
+statements // body of loop
+}
+}
+
+// OR
+ 
+for (initialization; termination condition; update statement) { // outer loop
+statements // body of loop
+while (condition) { // inner loop
+statements // body of loop
+}
+        }
+```
+Note that there is no difference which loop to choose for both outer and inner loops.
+
+* Here are some examples:
+
+```java
+
+for (int k = 1; k <= 3; k++) {
+for (int i = 1; i <= 4; i++) {
+System.out.print("*");
+}
+System.out.println();
+}
+
+// it can be interpreted as
+
+for each of rows {
+print 4 starts
+go to the next row
+}
+
+/*
+
+Output:
+****
+****
+****
+
+*/
+```
+
+
+This example has two loops nested in an outer loop.
+
+```java
+for (int i = 1; i <= 6; i++) {
+for (int j = 1; j <= i; j++)
+System.out.print("+");
+for (int j = 1; j <= 6 - i; j++)
+System.out.print("*");
+System.out.println();
+}
+
+/*
+Output:
++*****
+++****
++++***
+++++**
++++++*
+++++++
+*/
+```
+
+
 
 ## Errors and exceptions
-![8rnkmq.jpg](..%2F..%2F..%2F..%2F8rnkmq.jpg)
+
+![8rnkmq.jpg](8rnkmq.jpg)
 
 An exception is an error condition that occurs during the execution of a Java program
 
@@ -715,5 +963,20 @@ This material may be protected by copyright.
 
 There are two types of exceptions:
 
-1. Checked
-2. Unchecked
+1. Unchecked
+
+* An unchecked exception is one that is automatically handled by Java’s standard exception-handling methods, which terminate execution.
+
+ex. Division by zero
+2. Checked
+   
+* A checked exception is one where you provide code to handle the exception, either a try/catch/finally statement, or an explicit throw new…Exception clause.
+
+ex. _throw new ArithmeticException();_
+
+```java
+if (num == 0) 
+    throw new  ArithmeticException("Cannot divide by zero");
+else 
+     someFunction();
+```
