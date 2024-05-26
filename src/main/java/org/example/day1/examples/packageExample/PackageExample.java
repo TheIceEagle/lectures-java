@@ -7,5 +7,7 @@ public class PackageExample {
     }
     public static void main(String[] args) {
 
+        //Operator example
+        System.out.println(5+3<6-1);//What will be the result?
     }
 }

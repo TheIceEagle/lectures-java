@@ -407,6 +407,8 @@ System.out.println(++i) // 7 is printed, and i = 7
 
 ```
 
+![p0072-01.jpg](..%2F..%2F..%2F..%2F..%2FAppData%2FLocal%2FTemp%2Fp0072-01.jpg)
+
 ## Input/Output
 
 ### Input
@@ -485,6 +487,7 @@ System.out.println("This is a \\backslash\\"); // prints This is a \backslash\
 ```
 
 ## Control structures
+![img_18.png](img_18.png)
 ### Conditional statements
 These include the if, if...else, and switch statements. They are all selection control structures that introduce a decision-making ability into a program. Based on the truth value of a boolean expression, the computer will decide which path to follow.
 
@@ -622,6 +625,8 @@ System.out.println("Invalid grade");
 If any of A, B, C, D, or F are entered, an appropriate message will be written, and control will go to the statement immediately following the extended if statement. If any other string is entered, the final else is invoked, and the message Invalid grade will be written.
 
 ### Switch statement
+
+
 A switch statement is a programming construct that allows you to evaluate a variable or an expression against a list of possible values and execute different blocks of code based on the result of that evaluation.
 
 * The basic syntax of a switch statement:
@@ -693,10 +698,13 @@ default:
 
 In this example, all inputs from 1 to 5 print "Weekdays" while cases 6 and 7 print "Weekends". Since dayOfWeek is equal to 4, the code block associated with the case 4: statement is executed, which prints "Weekdays" to the console.
 ## Errors and exceptions
+![img_16.png](img_16.png)
+
 An exception is an error condition that occurs during the execution of a Java program
 
 This material may be protected by copyright.
 
 There are two types of exceptions:
-1.Checked
-2.Unchecked
+
+1. Checked
+2. Unchecked

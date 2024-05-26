@@ -1,5 +1,5 @@
 # Lectures of Java
-![Screenshot 2024-05-24 at 16.36.45.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Ff5%2F604ttxzj4495qvkwn_6cmqt40000gp%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_4INOFu%2FScreenshot%202024-05-24%20at%2016.36.45.png)
+
 ## This is a table of content
 
 ### [Introductory Java Language Features](lectures/Lecture_1/lec1.md)
@@ -22,7 +22,7 @@
 * Inheritance
 * Polymorphism
 * Type Compatibility      
-* Day 4: Standart Classes:
+* Standart Classes:
 * The Object class
 * The String class
 * Wrapper classes
@@ -34,7 +34,7 @@
 * Object-Oriented Program Design
 * Program Analysis
 * Small Programm Creation
-* Day 6: Array and ArrayLists
+* Array and ArrayLists
 * One-Dimensional Arrays
 * Array Lists
 * Two-Dimensional Arrays
@@ -54,5 +54,6 @@
 * Binary Search
 
 ### [List of Projects:]()
-
+ Coming soon ...
 ### [Exam Topic List:]()
+All of the above
