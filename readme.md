@@ -9,7 +9,7 @@
 *    Input/Output
 *    Control Structures
 *    Errors and exceptions
-### [Classes and Objects:]()
+### [Classes and Objects:](lectures/Lecture 2/lec2.md)
 * Objects
 * Classes
 * Public,Private and Static
