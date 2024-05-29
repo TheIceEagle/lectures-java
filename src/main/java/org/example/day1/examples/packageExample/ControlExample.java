@@ -31,15 +31,19 @@ public class ControlExample {
 //            System.out.println("Go, be a youtuber");
 
         //Switch expressions
+        int a = 2;
+        int b = 3;
 
-//        switch (inp) {
-//            case "A" -> System.out.println("Average");
-//            case "B" -> System.out.println("Below average");
-//            case "C" -> System.out.println("Cant have dinner");
-//            case "D" -> System.out.println("Dont come home");
-//            case "F" -> System.out.println("Find new family");
-//            default -> System.out.println("Go, be a youtuber");
-//        }
+
+
+        switch (inp) {
+            case "A" -> System.out.println("Average");
+            case "B" -> System.out.println("Below average");
+            case "C" -> System.out.println("Cant have dinner");
+            case "D" -> System.out.println("Dont come home");
+            case "F" -> System.out.println("Find new family");
+            default -> System.out.println("Go, be a youtuber");
+        }
 
 //        int smbl = 'A';
 //        System.out.println(smbl);
